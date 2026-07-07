@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output
+/build/
+/.cache/
+
+# Environment files (SESSION_SECRET, DASHBOARD_USERNAME, DASHBOARD_PASSWORD)
+.env
+.env.*
+!.env.example
+
+# Test coverage
+/coverage/
+
+# Editor and OS noise
+.DS_Store
+*.local
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Logs
+*.log
+npm-debug.log*
