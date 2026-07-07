@@ -79,10 +79,3 @@ Both are public Coinbase endpoints, called only from the server:
 
 - [`ARCHITECTURE.md`](./ARCHITECTURE.md) — module boundaries, feature layers, data flow, and the engineering rules.
 - [`CLAUDE.md`](./CLAUDE.md) — guidelines for AI coding tools working on follow-up features.
-
-## Follow-up Feature Guidelines
-
-- Extend the owning feature's `contracts.ts` first, then wire services, state, and UI through the feature's public API (`index.ts` / `server.ts`).
-- Keep provider-specific API code in `internal/services`, fetchers (`*.server.ts`) separate from pure parsers, so new data sources never leak into UI components.
-- Prefer route loaders or resource routes for external API calls; keep browser code focused on interaction state.
-- Expand the tests beside the module you change — every pure module has a sibling test file.
